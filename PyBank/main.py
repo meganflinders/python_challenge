@@ -62,6 +62,7 @@ with open(financial_analysis, "w") as f:
     min_change = min(change_per_month.values())
     #loop through dict to find the keys of the values that = the max and min
     for month in change_per_month.keys():
+        #find key-value in dict that = min and max change; print and save to txt file
         if change_per_month[month] == min_change:
             print(f'Greatest Decrease in Profits: {month} (${change_per_month[month]})')
             f.write(f'Greatest Decrease in Profits: {month} (${change_per_month[month]})\n')
@@ -69,15 +70,5 @@ with open(financial_analysis, "w") as f:
             print(f'Greatest Increase in Profits: {month} (${change_per_month[month]})')
             f.write(f'Greatest Increase in Profits: {month} (${change_per_month[month]})\n')
 
-
-#export text file with results
-#with open(financial_analysis, "w") as f:
- #   f.write("Financial Analysis\n")
-  #  f.write("-------------------------------------\n")
-   # f.write("Total months: %d\n" % row_count)
-    #f.write("Total: $%d\n" % net_total)
-    #f.write("Average change: $%d\n" % average_change)
-    #f.write(f"Greatest Increase in Profits: {month} (${change_per_month[month]})\n")
-    #f.write(f"Greatest Decrease in Profits: {month} (${change_per_month[month]})")
     
 
